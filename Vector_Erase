@@ -1,0 +1,33 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    int x,w,j,b,c;
+    vector<int> v;
+    cin>>x;
+    for(int i=0;i<x;i++)
+    {   cin>>j;
+        v.push_back(j);
+    }
+    cin>>w;
+    cin>>b>>c;
+   
+    
+    
+    v.erase(v.begin()+(w-1));
+    
+    v.erase(v.begin()+(b-1),v.begin()+(c-1));
+    
+    cout<<v.size()<<endl;
+    for (int i=0; i<v.size(); i++) {
+    cout<<v.at(i)<<" ";
+    }
+          
+    return 0;
+}
